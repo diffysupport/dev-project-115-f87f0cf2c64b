@@ -1,0 +1,47 @@
+basic:
+    name: 'https://bbc.com'
+    environments:
+        production: 'https://bbc.com'
+        staging: ''
+        development: ''
+    breakpoints:
+        - 640
+        - 1024
+        - 1200
+    pages:
+        - /
+        - /news
+        - /sport
+        - /business
+        - /innovation
+    monitoring:
+        days: {  }
+        type: daily
+        schedule_time: '01:30 PM'
+        schedule_time_zone: Europe/London
+        compare_with: baseline
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    isolate: ''
+    delay: 0
+    scroll: true
+    headers:
+        - { value: '', header: '' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content:
+        - { type: title, selector: '' }
+    sensitivity: 15
+    night_mode: ''
+    retina_images: ''
+    performance:
+        workers_production: 30
+        workers_nonproduction: 10
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
+proxy: false
+type: single_site
