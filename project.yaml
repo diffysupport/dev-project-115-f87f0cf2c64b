@@ -1,19 +1,20 @@
 basic:
-    name: 'https://bbc.com'
+    name: 'https://demo.diffy.website'
     environments:
-        production: 'https://bbc.com'
-        staging: ''
+        production: 'https://demo.diffy.website'
+        staging: 'https://demo-staging.diffy.website'
         development: ''
-    breakpoints: {  }
+    breakpoints:
+        - 640
+        - 1024
+        - 1200
     pages:
         - /
-        - /news
-        - /sport
-        - /business
-        - /innovation
+        - /about-us
+        - /services
     monitoring:
         days: {  }
-        type: daily
+        type: ''
         schedule_time: '12:30 AM'
         schedule_time_zone: Europe/London
         compare_with: last-production
@@ -22,18 +23,17 @@ advanced:
     mask: ''
     remove: ''
     isolate: ''
-    delay: 0
+    delay: 15
     scroll: true
     headers:
         - { value: '', header: '' }
     cookies: ''
     custom_js: ''
     custom_css: ''
-    mock_content:
-        - { type: title, selector: '' }
+    mock_content: ''
     sensitivity: 15
-    night_mode: false
-    retina_images: false
+    night_mode: ''
+    retina_images: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10
@@ -41,4 +41,4 @@ advanced:
         workers_nonproduction_delay: 0
     stabilize: true
 proxy: false
-type: single_site
+type: single-site
